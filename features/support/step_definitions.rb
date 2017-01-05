@@ -1,4 +1,7 @@
 Then /^the css should be inlined$/ do
   html = Nokogiri::HTML(page.html)
-  expect(html.xpath('//style').first.text).to match('monospace')
+  # first css file
+  expect(html.xpath('//style').inner_html).to match('monospace')
+  # second css file
+  expect(html.xpath('//style').inner_html).to match('padding')
 end
