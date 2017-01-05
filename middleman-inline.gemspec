@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
    s.authors     = ["Miloš Hadžić"]
    s.email       = ["milos@rightfold.io"]
-   s.homepage    = "http://rightfold.io"
+   s.homepage    = "https://github.com/miloshadzic/middleman-inline"
    s.summary     = %q{Inline JS and CSS in your Middleman templates.}
    s.description = %q{Inline JS and CSS in your Middleman templates.}
 
