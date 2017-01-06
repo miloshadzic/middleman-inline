@@ -6,14 +6,26 @@ class MiddlemanInline < ::Middleman::Extension
   helpers do
     def inline_css(*fnames)
       fnames.map do |fname|
-        fname += ".css" unless fname.match(".css")
+        fname.concat('.css') unless fname.match('.css')
 
-        resource = sitemap.resources.find do |res|
-          res.source_file.match(fname)
-        end
-
-        "<style type='text/css'>#{resource.render}</style>"
+        "<style type='text/css'>#{render_resource(fname)}</style>"
       end.join("\n")
+    end
+
+    def inline_js(*fnames)
+      fnames.map do |fname|
+        fname.concat('.js') unless fname.match('.js')
+
+        "<script type='text/javascript'>#{render_resource(fname)}</style>"
+      end.join("\n")
+    end
+
+    private
+
+    def render_resource(fname)
+      sitemap.resources.find do |res|
+        res.source_file.match(fname)
+      end.render
     end
   end
 end
