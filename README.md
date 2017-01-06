@@ -5,7 +5,7 @@ middleman-inline
 
 This gem adds helpers for middleman that inline your stylesheets and JavaScript. To use, add ``activate :inline`` to your ``config.rb``, and, helpers will be available in any template. Here shown in an example ERB layout:
 
-```
+```erb
 <html>
   <head>
     <%= include_js 'jquery' %>
