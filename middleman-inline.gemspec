@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/miloshadzic/middleman-inline"
   s.summary     = %q{Inline JS and CSS in your Middleman templates.}
   s.description = %q{Middleman extension that adds helpers for inlining JavaScript and CSS stylesheets.}
-  s.license     = 'GPLv3'
+  s.license     = 'GPL-3.0'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
