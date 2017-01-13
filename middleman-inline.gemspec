@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{Middleman extension that adds helpers for inlining JavaScript and CSS stylesheets.}
   s.license     = 'GPL-3.0'
 
-  s.files         = `git ls-files -- lib/*`.split("\n")
+  s.files         = ['README.md', 'CHANGELOG.md', 'LICENSE'] + `git ls-files -- lib/`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
