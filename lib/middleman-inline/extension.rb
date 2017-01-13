@@ -1,7 +1,5 @@
-# Require core library
 require 'middleman-core'
 
-# Extension namespace
 class MiddlemanInline < ::Middleman::Extension
   helpers do
     def inline_css(*args)
@@ -24,9 +22,7 @@ class MiddlemanInline < ::Middleman::Extension
     end
 
     def render_resource(fname)
-      sitemap.resources.find do |res|
-        res.source_file.match(fname)
-      end.render
+      sitemap.resources.find { |res| res.source_file.match(fname) }.render
     end
   end
 end

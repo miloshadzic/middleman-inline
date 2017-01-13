@@ -1,6 +1,6 @@
 require "middleman-core"
 
-Middleman::Extensions.register :middleman_inline do
+Middleman::Extensions.register :inline do
   require "middleman-inline/extension"
   MiddlemanInline
 end

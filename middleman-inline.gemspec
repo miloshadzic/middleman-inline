@@ -9,16 +9,21 @@ Gem::Specification.new do |s|
    s.email       = ["milos@rightfold.io"]
    s.homepage    = "https://github.com/miloshadzic/middleman-inline"
    s.summary     = %q{Inline JS and CSS in your Middleman templates.}
-   s.description = %q{Inline JS and CSS in your Middleman templates.}
+   s.description = %q{Middleman extension that adds helpers for inlining JavaScript and CSS stylesheets.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-  
-  # The version of middleman-core your extension depends on
+
   s.add_runtime_dependency("middleman-core", [">= 4.2.0"])
-  
-  # Additional dependencies
-  # s.add_runtime_dependency("gem-name", "gem-version")
+
+  s.add_development_dependency('rake')
+  s.add_development_dependency('rdoc')
+  s.add_development_dependency('yard')
+  s.add_development_dependency('cucumber')
+  s.add_development_dependency('nokogiri')
+  s.add_development_dependency('capybara')
+  s.add_development_dependency('aruba')
+  s.add_development_dependency('rspec')
 end
