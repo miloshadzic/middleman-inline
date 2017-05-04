@@ -8,7 +8,7 @@ This gem adds helpers for middleman that inline your stylesheets and JavaScript.
 ```erb
 <html>
   <head>
-    <%= include_js 'jquery' %>
-    <%= include_css 'style', 'normalize.css' %>
+    <%= inline_js 'jquery' %>
+    <%= inline_css 'style', 'normalize.css' %>
     ...
 ```
