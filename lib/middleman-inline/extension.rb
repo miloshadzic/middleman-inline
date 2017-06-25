@@ -10,7 +10,7 @@ class MiddlemanInline < ::Middleman::Extension
 
     def inline_js(*args)
       args.map do |arg|
-        "<script type='text/javascript'>#{render_resource(fname(arg, '.js'))}</style>"
+        "<script type='text/javascript'>#{render_resource(fname(arg, '.js'))}</script>"
       end.join("\n")
     end
 
