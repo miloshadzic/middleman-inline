@@ -3,8 +3,8 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "middleman-inline"
-  s.version     = "0.0.1"
-  s.date        = '2017-01-13'
+  s.version     = "0.0.2"
+  s.date        = '2017-07-05'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Miloš Hadžić"]
   s.email       = ["milos@rightfold.io"]
